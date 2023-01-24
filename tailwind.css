@@ -831,8 +831,16 @@ video {
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .indent-2 {
   text-indent: 0.5rem;
+}
+
+.indent-4 {
+  text-indent: 1rem;
 }
 
 .align-baseline {
@@ -875,6 +883,11 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-normal {
@@ -978,5 +991,9 @@ video {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:text-center {
+    text-align: center;
   }
 }

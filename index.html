@@ -19,30 +19,27 @@
 		<nav>
 			<ul class="flex justify-around">
 				<li>
-					<a href="">Início</a>
+					<a href="" rel="tag" target="_self">Início</a>
 				</li>
 				<li>
-					<a href="">Sobre mim</a>
+					<a href="#about-me" rel="tag" target="_self">Sobre mim</a>
 				</li>
 				<li>
-					<a href="">Experiência</a>
+					<a href="" rel="tag" target="_self">Experiência</a>
 				</li>
 				<li>
-					<a href="">Projetos</a>
+					<a href="" rel="tag" target="_self">Projetos</a>
 				</li>
 			</ul>
 		</nav>
 	</header>
 
 	<main class="space-y-44">
-		<section class=" h-screen flex flex-col md:flex-row justify-evenly md:justify-between items-center mx-auto w-5/6">
-			<article class="">
+		<section class="h-screen flex flex-col md:flex-row justify-evenly md:justify-between items-center mx-auto w-5/6">
+			<article>
 				<h1 class="max-w-[500px] text-3xl leading-7">
 					<strong class="hidden">Carlos Cardoso</strong>
-					<!-- <strong id="my-name" class="font-normal text-6xl text-fuchsia-500 after:content-['|'] after:animate-pulse-switch whitespace-nowrap overflow-x-hidden"> -->
-					<strong id="my-name" class="font-mono text-6xl text-fuchsia-500">
-						
-					</strong>
+					<strong id="my-name" class="font-mono text-6xl text-fuchsia-500"></strong>
 					<p class="indent-2">Desenvolvedor Web</p>
 				</h1>
 			</article>
@@ -67,8 +64,13 @@
 			</article>
 		</section>
 
-		<section class="max-w-prose text-5xl text-center">
-			<h2>Sobre mim</h2>
+		<section id="about-me" class="max-w-prose mx-auto indent-4 text-justify text-lg">
+			<h2 class="text-5xl text-center">Sobre mim</h2>
+			<p class="">Belém, Pará</p>
+			<p>Me chamo Carlos Vitor Cardoso, tenho 17 anos e desde criança tive grande interesse por tecnologia, principalmente pela computação, o que me logo me levou para a área desenvolvimento em 2021, com o curso de Html e Css do Curso em Vídeo.</p>
+			<p>No momento estou focando no desenvolvimento Front End, estudando Vue.Js e aprimorando minhas habilidades com JavaScript e TypeScript.
+			</p>
+			<p>Desde o começo estudo por conta por meio de vários cursos e vídeos, sempre fazendo algum projeto para por as habilidades em prática. Hoje, tenho experiência com as principais tecnologias empregadas na Web e estou me aprofundando em NodeJs.</p>
 		</section>
 
 		<section class="w-4/5 mx-auto space-y-24 pb-80">
@@ -123,7 +125,7 @@
 			</article>
 		</section>
 	</main>
-	<!-- <footer class="bg-slate-900">
+	<footer class="bg-slate-900">
 		<ul>
 			<li><a href="https://github.com/carloscardoso05/Portfolio" rel="external" target="_blank">
 					Visite esse repositório no GitHub 🔗
@@ -134,7 +136,7 @@
 				</abbr>
 			</li>
 		</ul>
-	</footer> -->
+	</footer>
 
 	<script src="main.js"></script>
 </body>
