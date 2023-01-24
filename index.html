@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfólio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="tailwind.css">
+</head>
+
+<body class="bg-fixed bg-gradient-dark-blue font-sofia-sans text-gray-200">
+
+	<header
+		class="fixed text-xl top-0 w-full bg-gray-50/10 border border-t-0 border-gray-50/30 py-1.5 rounded-b-2xl backdrop-blur-sm">
+		<nav>
+			<ul class="flex justify-around">
+				<li>
+					<a href="">Início</a>
+				</li>
+				<li>
+					<a href="">Sobre mim</a>
+				</li>
+				<li>
+					<a href="">Experiência</a>
+				</li>
+				<li>
+					<a href="">Projetos</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="space-y-44">
+		<section class=" h-screen flex flex-col md:flex-row justify-evenly md:justify-between items-center mx-auto w-5/6">
+			<article class="">
+				<h1 class="max-w-[500px] text-3xl leading-7">
+					<strong class="hidden">Carlos Cardoso</strong>
+					<!-- <strong id="my-name" class="font-normal text-6xl text-fuchsia-500 after:content-['|'] after:animate-pulse-switch whitespace-nowrap overflow-x-hidden"> -->
+					<strong id="my-name" class="font-mono text-6xl text-fuchsia-500">
+						
+					</strong>
+					<p class="indent-2">Desenvolvedor Web</p>
+				</h1>
+			</article>
+
+			<article class="flex flex-col space-y-8 w-full max-w-sm">
+				<button
+					class="border border-emerald-400 rounded-md px-10 py-3 min-w-max text-center text-2xl shadow-emerald-400 shadow-[2px_2px_0px] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+					<a href="https://github.com/carloscardoso05" rel="external" target="_blank">
+						<img class="inline align-baseline aspect-square w-5" src="./assets/github.png"
+							alt="Ícone do GitHub">
+						GitHub
+					</a>
+				</button>
+				<button
+					class="border border-sky-400 rounded-md px-10 py-3 min-w-max text-center text-2xl shadow-sky-400 shadow-[2px_2px_0px] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+					<a href="https://linkedin.com/in/carlos-vitor-cardoso/" rel="external" target="_blank">
+						<img class="inline align-baseline aspect-square w-6" src="./assets/linkedin.png"
+							alt="Ícone do Linkedin">
+						Linkedin
+					</a>
+				</button>
+			</article>
+		</section>
+
+		<section class="max-w-prose text-5xl text-center">
+			<h2>Sobre mim</h2>
+		</section>
+
+		<section class="w-4/5 mx-auto space-y-24 pb-80">
+			<h2 class="text-4xl text-center">Tecnologias</h2>
+			<article class="flex flex-col gap-5 w-fit mx-auto
+			">
+				<div class="border-4 border-indigo-500 bg-indigo-500/25 rounded-2xl">
+					<div class="hidden" data-index="0">
+						<img src="./assets/html.png" class="mx-auto" alt="Ícone do html">
+					</div>
+					<div class="hidden" data-index="1">
+						<img src="./assets/css.png" class="mx-auto" alt="Ícone do css">
+					</div>
+					<div class="flex flex-col" data-index="2">
+						<img src="./assets/tailwind.png" class="mx-auto shrink-0" alt="Ícone do tailwind">
+						<div class="box-border p-5">
+							<h3 class="text-2xl">Tailwind CSS</h3>
+						</div>
+					</div>
+					<div class="hidden" data-index="3">
+						<img src="./assets/js.png" class="mx-auto" alt="Ícone do javascript">
+					</div>
+					<div class="hidden" data-index="4">
+						<img src="./assets/vue.png" class="mx-auto" alt="Ícone do vue js">
+					</div>
+					<div class="hidden" data-index="5">
+						<img src="./assets/python.png" class="mx-auto" alt="Ícone do python">
+					</div>
+					<div class="hidden" data-index="6">
+						<img src="./assets/python.png" class="mx-auto" alt="Ícone do python">
+					</div>
+					
+					<div class="box-border p-5 -mt-5">
+						Nível: <br>
+						<div class="bg-slate-200 relative h-3 w-full rounded">
+							<div class="bg-blue-600 absolute top-0 left-0 h-full w-2/3 rounded"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex divide-x divide-slate-500">
+					<button class="bg-slate-100 rounded-l-lg basis-2/5">
+						<img src="assets/left.png" alt="seta para a esquerda" class="invert-[.50] m-auto">
+					</button>
+					<button class="bg-slate-100 basis-1/5">
+						<img src="assets/all.png" alt="ver todos" class="invert-[.50] m-auto box-border p-1.5">
+					</button>
+					<button class="bg-slate-100 rounded-r-lg basis-2/5">
+						<img src="assets/right.png" alt="seta para a direita" class="invert-[.50] m-auto">
+					</button>
+				</div>
+			</article>
+		</section>
+	</main>
+	<!-- <footer class="bg-slate-900">
+		<ul>
+			<li><a href="https://github.com/carloscardoso05/Portfolio" rel="external" target="_blank">
+					Visite esse repositório no GitHub 🔗
+				</a></li>
+			<li>
+				Email para contato: <abbr title="Copiar" onclick="copiarEmail()" id="copiar-email">
+					dev.cvcardos@gmail.com
+				</abbr>
+			</li>
+		</ul>
+	</footer> -->
+
+	<script src="main.js"></script>
+</body>
+
+</html>
