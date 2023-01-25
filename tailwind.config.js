@@ -10,7 +10,9 @@ module.exports = {
         "gradient-beige":
           "linear-gradient(55deg,hsl(29deg 60% 93%) 13%,hsl(28deg 48% 90%) 45%,hsl(27deg 42% 87%) 50%,hsl(27deg 38% 85%) 50%,hsl(26deg 35% 82%) 50%,hsl(25deg 33% 79%) 50%,hsl(25deg 31% 76%) 55%,hsl(24deg 30% 74%) 87%)",
         "gradient-dark-blue":
-          "linear-gradient(55deg, #16213E 50%, #0F3460 50%)",
+          "linear-gradient(to right, #16213E 50%, #0F3460 50%)",
+          "gradient-blue-green": "linear-gradient(55deg, hsla(238, 100%, 24%, 1) 20%, hsla(211, 72%, 44%, 1) 68%, hsla(178, 100%, 31%, 1) 100%);",
+          "gradient-red-violet": "linear-gradient(90deg, hsla(0, 89%, 48%, 1) 0%, hsla(262, 83%, 58%, 1) 100%);"
       },
       fontFamily: {
         "sofia-sans": ["Sofia Sans", ...defaultTheme.fontFamily.sans],
@@ -21,6 +23,10 @@ module.exports = {
         "dark-purple": "#2D132C",
         "rainsin-black": "#252525",
         "deep-violet": "#13005A",
+        "yankees-blue": "#16213E",
+        "dark-midnight-blue": "#0F3460",
+         "erie-black": "#181818",
+         "space-cadet": "#1B2951"
       },
       keyframes: {
         "bounce-right": {
