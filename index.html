@@ -16,10 +16,16 @@
 
 <body class="bg-fixed bg-erie-black font-sofia-sans text-gray-200">
 
+	<!-- <header class="hidden sm:block fixed text-xl h-fit top-0 w-full bg-[#25234D] border border-t-0 border-indigo-600 py-2"> -->
 	<header
-		class="fixed text-xl top-0 w-full bg-gray-50/10 border border-t-0 border-gray-50/30 py-1.5 rounded-b-2xl backdrop-blur-sm">
-		<nav>
-			<ul class="flex justify-around">
+		class="hidden sm:block fixed text-xl h-fit top-0 w-full bg-space-cadet/80 backdrop-blur-sm border border-t-0 border-blue-900 py-2 z-20">
+		<nav class="flex justify-around">
+			<p class="text-2xl max-w-fit shrink-0">
+				<em class="not-italic text-emerald-400 text-3xl">{{</em>
+				Crls Crds
+				<em class="not-italic text-emerald-400 text-3xl">}}</em>
+			</p>
+			<ul class="flex justify-between	w-3/5 max-w-xl items-center">
 				<li>
 					<a href="#inicio" rel="tag" target="_self">Início</a>
 				</li>
@@ -48,14 +54,14 @@
 			</article>
 
 			<article class="flex flex-col space-y-8 w-full max-w-sm">
-				<a class="border border-indigo-600 rounded-md px-10 py-3 min-w-max text-center text-2xl shadow-indigo-600 shadow-[2px_2px_0px] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+				<a class="border border-emerald-500 rounded-md px-10 py-3 min-w-max text-center text-2xl shadow-emerald-500 shadow-[2px_2px_0px] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
 					href="https://github.com/carloscardoso05" rel="external" target="_blank">
 					<button>
 						<img class="inline align-baseline aspect-square w-5" src="./assets/github.png" alt="Ícone do GitHub">
 						GitHub
 					</button>
 				</a>
-				<a class="border border-indigo-600 rounded-md px-10 py-3 min-w-max text-center text-2xl shadow-indigo-600 shadow-[2px_2px_0px] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+				<a class="border border-emerald-500 rounded-md px-10 py-3 min-w-max text-center text-2xl shadow-emerald-500 shadow-[2px_2px_0px] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
 					href="https://linkedin.com/in/carlos-vitor-cardoso/" rel="external" target="_blank">
 					<button>
 						<img class="inline align-baseline aspect-square w-6" src="./assets/linkedin.png" alt="Ícone do Linkedin">
@@ -69,27 +75,40 @@
 
 		<section id="projetos" class="w-full bg-space-cadet">
 			<article class="space-y-10 mx-auto py-20 px-6">
-				<div class="mx-auto max-w-fit bg-gradient-green-purple animate-background-pan bg-[length:500px_20px] pb-1">
+				<div class="mx-auto max-w-fit bg-gradient-green-violet animate-background-pan bg-[length:500px_20px] pb-1">
 					<h2 class="text-6xl sm:text-7xl bg-space-cadet">Projetos</h2>
 				</div>
-				<div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+				<div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2	gap-8 max-w-4xl mx-auto">
+					<div class="w-full aspect-[3/2] flex items-center justify-center">
+						<a href="" class="w-full h-full">
+							<p></p>
+							<img src="./assets/controle-de-devedores.png" alt="" class="rounded-lg border-2 border-emerald-500 z-10 hover:brightness-50 transition duration-200">
+						</a>
+					</div>
 					<a href="">
-						<div class="w-full aspect-[3/2] border border-cyan-500 rounded-md flex items-center justify-center"><p>Em breve</p></div>
+						<div class="w-full aspect-[3/2] border-2 border-emerald-500 rounded-md flex items-center justify-center">
+							<p>Em breve</p>
+						</div>
 					</a>
 					<a href="">
-						<div class="w-full aspect-[3/2] border border-cyan-500 rounded-md flex items-center justify-center"><p>Em breve</p></div>
+						<div class="w-full aspect-[3/2] border-2 border-emerald-500 rounded-md flex items-center justify-center">
+							<p>Em breve</p>
+						</div>
 					</a>
 					<a href="">
-						<div class="w-full aspect-[3/2] border border-cyan-500 rounded-md flex items-center justify-center"><p>Em breve</p></div>
+						<div class="w-full aspect-[3/2] border-2 border-emerald-500 rounded-md flex items-center justify-center">
+							<p>Em breve</p>
+						</div>
 					</a>
 					<a href="">
-						<div class="w-full aspect-[3/2] border border-cyan-500 rounded-md flex items-center justify-center"><p>Em breve</p></div>
+						<div class="w-full aspect-[3/2] border-2 border-emerald-500 rounded-md flex items-center justify-center">
+							<p>Em breve</p>
+						</div>
 					</a>
 					<a href="">
-						<div class="w-full aspect-[3/2] border border-cyan-500 rounded-md flex items-center justify-center"><p>Em breve</p></div>
-					</a>
-					<a href="">
-						<div class="w-full aspect-[3/2] border border-cyan-500 rounded-md flex items-center justify-center"><p>Em breve</p></div>
+						<div class="w-full aspect-[3/2] border-2 border-emerald-500 rounded-md flex items-center justify-center">
+							<p>Em breve</p>
+						</div>
 					</a>
 				</div>
 			</article>
@@ -99,7 +118,7 @@
 
 		<section id="habilidades" class="w-full">
 			<article class="space-y-10 mx-auto py-20 px-6">
-				<div class="mx-auto max-w-fit bg-gradient-green-purple animate-background-pan bg-[length:500px_20px] pb-1">
+				<div class="mx-auto max-w-fit bg-gradient-green-violet animate-background-pan bg-[length:500px_20px] pb-1">
 					<h2 class="text-6xl sm:text-7xl bg-erie-black">Habilidades</h2>
 				</div>
 				<div class="gap-8 max-w-xl mx-auto grid grid-cols-2 sm:grid-cols-3 grid-flow-row">
@@ -133,7 +152,7 @@
 
 		<section id="sobre-mim" class="box-border min-h-screen ">
 			<div class="space-y-10 max-w-prose mx-auto py-20 text-justify text-lg px-6">
-				<div class="max-w-fit bg-gradient-green-purple animate-background-pan bg-[length:500px_20px] pb-1">
+				<div class="max-w-fit bg-gradient-green-violet animate-background-pan bg-[length:500px_20px] pb-1">
 					<h2 class="text-6xl sm:text-7xl bg-erie-black">Sobre mim</h2>
 				</div>
 				<div class="space-y-2">
