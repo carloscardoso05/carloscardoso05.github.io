@@ -31,7 +31,7 @@ module.exports = {
             "background-position": "0% center",
           },
           "100%": {
-            "background-position": "-200% center",
+            "background-position": "-300% center",
           },
         },
       },
