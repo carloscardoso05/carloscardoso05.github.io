@@ -1,74 +1,130 @@
 ---
 title: "RUBot"
-summary: "A Telegram Bot for UFPA's universitary restaurant"
+summary: "A Telegram bot for UFPA's university restaurant that delivers daily and weekly menus."
 date: 2025-09-09
 draft: false
 tags: ["NestJS", "Web Scraping", "TypeScript", "Node.js"]
-
 ---
 
-## Overview
+# RUBot
 
-**RUBot** is a Telegram bot built with **NestJS** that provides the weekly and daily menu of the universitary restaurant at **UFPA** (Universidade Federal do Pará).  
-It automatically scrapes the official RU website, formats the menu, and delivers it through a simple and user-friendly Telegram interface.
+**RUBot** is a Telegram bot built with **NestJS** that delivers the daily and weekly menu of UFPA’s university restaurant. It scrapes the official RU website, formats the menu, and sends it through a user-friendly Telegram interface.  
 
-It also counts with a RESTful API that provides the complete the daily or weekly menu on JSON format, but it's not publicly available yet.
+The project also includes a RESTful API for retrieving menus in JSON format (currently private).
 
 {{< github repo="carloscardoso05/rubjs" showThumbnail=false >}}
 
+---
+
 ## Features
 
-- **Telegram Bot Integration**: Built with [Telegraf](https://telegraf.js.org/) and [nestjs-telegraf](https://github.com/bukhalo/nestjs-telegraf) for seamless Telegram API communication. Telegram commands:
+### Telegram Bot
+- Built with [Telegraf](https://telegraf.js.org/) and [nestjs-telegraf](https://github.com/bukhalo/nestjs-telegraf) for seamless Telegram API integration.
+- Commands:
   - `/hoje` → Returns today’s menu.  
-  - `/semana` → Returns the entire week’s menu.
-- **Web Scraping**: Uses [Cheerio](https://cheerio.js.org/) to extract daily and weekly menus directly from UFPA’s RU website.  
-- **Rate Limiting**: Prevents abuse with request throttling using `telegraf-ratelimit`.
-- **REST API Endpoints**:  
-  - `/hoje` → Returns today’s menu.  
-  - `/semana` → Returns the entire week’s menu.
-- **Formatted Messages**: Meals are displayed with icons, highlighting *main dish*, *vegetarian option*, and *side dishes*.  
+  - `/semana` → Returns the menu for the entire week.
+
+### Web Scraping
+- Uses [Cheerio](https://cheerio.js.org/) to extract daily and weekly menus directly from UFPA’s RU website.
+- Automatically formats meals with icons highlighting the main dish, vegetarian option, and side dishes.
+
+### REST API
+- Provides endpoints for programmatic access to menus:
+  - `/hoje` → Today’s menu in JSON format.  
+  - `/semana` → Weekly menu in JSON format.  
+
+### Security & Reliability
+- Prevents abuse with rate limiting using `telegraf-ratelimit`.
+- Includes basic error handling for scraping failures.
+
+---
 
 ## Tech Stack
 
-- **Programming language**: TypeScript
-- **Backend Framework**: [NestJS](https://nestjs.com)
-- **Scraping**: [Cheerio](https://cheerio.js.org/)  
-- **Messaging**: [Telegraf](https://telegraf.js.org/), [nestjs-telegraf](https://github.com/bukhalo/nestjs-telegraf)  
-- **Other Tools**:  
-  - ESLint + Prettier (linting/formatting)  
+- **Programming Language:** TypeScript  
+- **Backend Framework:** [NestJS](https://nestjs.com)  
+- **Scraping:** [Cheerio](https://cheerio.js.org/)  
+- **Messaging:** [Telegraf](https://telegraf.js.org/), [nestjs-telegraf](https://github.com/bukhalo/nestjs-telegraf)  
+- **Tools:**  
+  - ESLint + Prettier (linting and formatting)  
   - Jest (unit and e2e testing)  
-  - dotenv (environment configuration)  
+  - dotenv (environment configuration)
+
+---
 
 ## Project Structure
 
-- `src/scraper/` → Handles menu extraction from the RU website.  
-- `src/formatter/` → Formats scraped data into structured, readable text for Telegram.  
-- `src/bot/` → Manages Telegram commands and bot interactions.  
-- `src/app.controller.ts` → REST endpoints for fetching menus programmatically.  
+- `src/scraper/` → Extracts menus from the RU website.  
+- `src/formatter/` → Formats scraped data into readable messages for Telegram.  
+- `src/bot/` → Handles Telegram commands and bot interactions.  
+- `src/app.controller.ts` → REST API endpoints for menus.
+
+---
 
 ## Example Interaction
 
-- User sends `/hoje` → Bot responds with today’s lunch and dinner options.  
-- User sends `/semana` → Bot lists the menu for each weekday.  
-
-## Installation & Run
-
-If you want to reproduce this project, you first need to create a Telegram bot. Acess this tutorial for more information: [https://core.telegram.org/bots/tutorial](https://core.telegram.org/bots/tutorial).
-
-You also need to create a `.env` file at the root folder, it must contain the key `TELEGRAM_KEY` with yout bot key.
-
-```.env
-TELEGRAM_KEY=<your_key>
+**User:** `/hoje`  
+**Bot:**  
 ```
 
-After this setup, you can install the dependencies and run the project.
+🍛 Today’s Menu:
+
+* Main dish: Chicken with rice
+* Vegetarian: Lentil stew
+* Side dishes: Salad, beans
+
+````
+
+**User:** `/semana`  
+**Bot:** Lists the menu for each weekday with icons and formatting.
+
+---
+
+## Installation & Running
+
+### Prerequisites
+- Node.js 18+ and npm installed.
+- Telegram bot token (create one via [Telegram Bot Tutorial](https://core.telegram.org/bots/tutorial)).
+
+### Setup
+1. Create a `.env` file in the project root:
+
+```env
+TELEGRAM_KEY=<your_bot_token>
+````
+
+2. Install dependencies:
 
 ```bash
-# Install dependencies
 npm install
+```
 
-# Development mode
+3. Run in development mode:
+
+```bash
 npm run start:dev
+```
 
-# Production
+4. Run in production:
+
+```bash
 npm run start:prod
+```
+
+### Testing
+
+```bash
+npm run test
+```
+
+---
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Please fork the repository and submit a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License.

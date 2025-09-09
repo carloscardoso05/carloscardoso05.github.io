@@ -18,7 +18,7 @@
     <meta name="title" content="RUBot &middot; Carlos Cardoso">
 
   
-  <meta name="description" content="A Telegram Bot for UFPA&#39;s universitary restaurant">
+  <meta name="description" content="A Telegram bot for UFPA&#39;s university restaurant that delivers daily and weekly menus.">
   <meta name="keywords" content="NestJS,Web Scraping,TypeScript,Node.js,">
   
   
@@ -98,7 +98,7 @@
   <meta property="og:url" content="http://localhost:1313/en/projects/rub/">
   <meta property="og:site_name" content="Carlos Cardoso">
   <meta property="og:title" content="RUBot">
-  <meta property="og:description" content="A Telegram Bot for UFPA’s universitary restaurant">
+  <meta property="og:description" content="A Telegram bot for UFPA’s university restaurant that delivers daily and weekly menus.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="projects">
@@ -112,7 +112,7 @@
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="RUBot">
-  <meta name="twitter:description" content="A Telegram Bot for UFPA’s universitary restaurant">
+  <meta name="twitter:description" content="A Telegram bot for UFPA’s university restaurant that delivers daily and weekly menus.">
 
   <script type="application/ld+json">
   [{
@@ -122,7 +122,7 @@
     "name": "RUBot",
     "headline": "RUBot",
     
-    "abstract": "A Telegram Bot for UFPA\u0026rsquo;s universitary restaurant",
+    "abstract": "A Telegram bot for UFPA\u0026rsquo;s university restaurant that delivers daily and weekly menus.",
     "inLanguage": "en",
     "url" : "http:\/\/localhost:1313\/en\/projects\/rub\/",
     "author" : {
@@ -138,7 +138,7 @@
     "keywords": ["NestJS","Web Scraping","TypeScript","Node.js"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "329"
+    "wordCount": "342"
   }]
   </script>
 
@@ -545,7 +545,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-09-09T00:00:00&#43;00:00">9 September 2025</time><span class="px-2 text-primary-500">&middot;</span><span>329 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+      <time datetime="2025-09-09T00:00:00&#43;00:00">9 September 2025</time><span class="px-2 text-primary-500">&middot;</span><span>342 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
     
 
     
@@ -678,12 +678,26 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#features">Features</a></li>
+    <li><a href="#features">Features</a>
+      <ul>
+        <li><a href="#telegram-bot">Telegram Bot</a></li>
+        <li><a href="#web-scraping">Web Scraping</a></li>
+        <li><a href="#rest-api">REST API</a></li>
+        <li><a href="#security--reliability">Security &amp; Reliability</a></li>
+      </ul>
+    </li>
     <li><a href="#tech-stack">Tech Stack</a></li>
     <li><a href="#project-structure">Project Structure</a></li>
     <li><a href="#example-interaction">Example Interaction</a></li>
-    <li><a href="#installation--run">Installation &amp; Run</a></li>
+    <li><a href="#installation--running">Installation &amp; Running</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#testing">Testing</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
   </ul>
 </nav>
   </div>
@@ -697,12 +711,26 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#features">Features</a></li>
+    <li><a href="#features">Features</a>
+      <ul>
+        <li><a href="#telegram-bot">Telegram Bot</a></li>
+        <li><a href="#web-scraping">Web Scraping</a></li>
+        <li><a href="#rest-api">REST API</a></li>
+        <li><a href="#security--reliability">Security &amp; Reliability</a></li>
+      </ul>
+    </li>
     <li><a href="#tech-stack">Tech Stack</a></li>
     <li><a href="#project-structure">Project Structure</a></li>
     <li><a href="#example-interaction">Example Interaction</a></li>
-    <li><a href="#installation--run">Installation &amp; Run</a></li>
+    <li><a href="#installation--running">Installation &amp; Running</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#testing">Testing</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
   </ul>
 </nav>
   </div>
@@ -722,18 +750,17 @@
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">Overview 
-    <div id="overview" class="anchor"></div>
+<h1 class="relative group">RUBot 
+    <div id="rubot" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#overview" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#rubot" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
-<p><strong>RUBot</strong> is a Telegram bot built with <strong>NestJS</strong> that provides the weekly and daily menu of the universitary restaurant at <strong>UFPA</strong> (Universidade Federal do Pará).<br>
-It automatically scrapes the official RU website, formats the menu, and delivers it through a simple and user-friendly Telegram interface.</p>
-<p>It also counts with a RESTful API that provides the complete the daily or weekly menu on JSON format, but it&rsquo;s not publicly available yet.</p>
+</h1>
+<p><strong>RUBot</strong> is a Telegram bot built with <strong>NestJS</strong> that delivers the daily and weekly menu of UFPA’s university restaurant. It scrapes the official RU website, formats the menu, and sends it through a user-friendly Telegram interface.</p>
+<p>The project also includes a RESTful API for retrieving menus in JSON format (currently private).</p>
 <div class="github-card-wrapper">
     <a id="github-fd9b213d59e5c0b5fb7ec4b306312405" target="_blank" href="https://github.com/carloscardoso05/rubjs" class="cursor-pointer">
       <div
@@ -789,6 +816,7 @@ It automatically scrapes the official RU website, formats the menu, and delivers
         data-repo-id="github-fd9b213d59e5c0b5fb7ec4b306312405"></script>
     </a>
   </div>
+<hr>
 
 <h2 class="relative group">Features 
     <div id="features" class="anchor"></div>
@@ -799,32 +827,81 @@ It automatically scrapes the official RU website, formats the menu, and delivers
     </span>        
     
 </h2>
+
+<h3 class="relative group">Telegram Bot 
+    <div id="telegram-bot" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#telegram-bot" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
 <ul>
-<li><strong>Telegram Bot Integration</strong>: Built with <a
+<li>Built with <a
   href="https://telegraf.js.org/"
     target="_blank"
   >Telegraf</a> and <a
   href="https://github.com/bukhalo/nestjs-telegraf"
     target="_blank"
-  >nestjs-telegraf</a> for seamless Telegram API communication. Telegram commands:
+  >nestjs-telegraf</a> for seamless Telegram API integration.</li>
+<li>Commands:
 <ul>
 <li><code>/hoje</code> → Returns today’s menu.</li>
-<li><code>/semana</code> → Returns the entire week’s menu.</li>
+<li><code>/semana</code> → Returns the menu for the entire week.</li>
 </ul>
 </li>
-<li><strong>Web Scraping</strong>: Uses <a
+</ul>
+
+<h3 class="relative group">Web Scraping 
+    <div id="web-scraping" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#web-scraping" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>Uses <a
   href="https://cheerio.js.org/"
     target="_blank"
   >Cheerio</a> to extract daily and weekly menus directly from UFPA’s RU website.</li>
-<li><strong>Rate Limiting</strong>: Prevents abuse with request throttling using <code>telegraf-ratelimit</code>.</li>
-<li><strong>REST API Endpoints</strong>:
+<li>Automatically formats meals with icons highlighting the main dish, vegetarian option, and side dishes.</li>
+</ul>
+
+<h3 class="relative group">REST API 
+    <div id="rest-api" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#rest-api" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
 <ul>
-<li><code>/hoje</code> → Returns today’s menu.</li>
-<li><code>/semana</code> → Returns the entire week’s menu.</li>
+<li>Provides endpoints for programmatic access to menus:
+<ul>
+<li><code>/hoje</code> → Today’s menu in JSON format.</li>
+<li><code>/semana</code> → Weekly menu in JSON format.</li>
 </ul>
 </li>
-<li><strong>Formatted Messages</strong>: Meals are displayed with icons, highlighting <em>main dish</em>, <em>vegetarian option</em>, and <em>side dishes</em>.</li>
 </ul>
+
+<h3 class="relative group">Security &amp; Reliability 
+    <div id="security--reliability" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#security--reliability" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>Prevents abuse with rate limiting using <code>telegraf-ratelimit</code>.</li>
+<li>Includes basic error handling for scraping failures.</li>
+</ul>
+<hr>
 
 <h2 class="relative group">Tech Stack 
     <div id="tech-stack" class="anchor"></div>
@@ -836,30 +913,31 @@ It automatically scrapes the official RU website, formats the menu, and delivers
     
 </h2>
 <ul>
-<li><strong>Programming language</strong>: TypeScript</li>
-<li><strong>Backend Framework</strong>: <a
+<li><strong>Programming Language:</strong> TypeScript</li>
+<li><strong>Backend Framework:</strong> <a
   href="https://nestjs.com"
     target="_blank"
   >NestJS</a></li>
-<li><strong>Scraping</strong>: <a
+<li><strong>Scraping:</strong> <a
   href="https://cheerio.js.org/"
     target="_blank"
   >Cheerio</a></li>
-<li><strong>Messaging</strong>: <a
+<li><strong>Messaging:</strong> <a
   href="https://telegraf.js.org/"
     target="_blank"
   >Telegraf</a>, <a
   href="https://github.com/bukhalo/nestjs-telegraf"
     target="_blank"
   >nestjs-telegraf</a></li>
-<li><strong>Other Tools</strong>:
+<li><strong>Tools:</strong>
 <ul>
-<li>ESLint + Prettier (linting/formatting)</li>
+<li>ESLint + Prettier (linting and formatting)</li>
 <li>Jest (unit and e2e testing)</li>
 <li>dotenv (environment configuration)</li>
 </ul>
 </li>
 </ul>
+<hr>
 
 <h2 class="relative group">Project Structure 
     <div id="project-structure" class="anchor"></div>
@@ -871,11 +949,12 @@ It automatically scrapes the official RU website, formats the menu, and delivers
     
 </h2>
 <ul>
-<li><code>src/scraper/</code> → Handles menu extraction from the RU website.</li>
-<li><code>src/formatter/</code> → Formats scraped data into structured, readable text for Telegram.</li>
-<li><code>src/bot/</code> → Manages Telegram commands and bot interactions.</li>
-<li><code>src/app.controller.ts</code> → REST endpoints for fetching menus programmatically.</li>
+<li><code>src/scraper/</code> → Extracts menus from the RU website.</li>
+<li><code>src/formatter/</code> → Formats scraped data into readable messages for Telegram.</li>
+<li><code>src/bot/</code> → Handles Telegram commands and bot interactions.</li>
+<li><code>src/app.controller.ts</code> → REST API endpoints for menus.</li>
 </ul>
+<hr>
 
 <h2 class="relative group">Example Interaction 
     <div id="example-interaction" class="anchor"></div>
@@ -886,36 +965,106 @@ It automatically scrapes the official RU website, formats the menu, and delivers
     </span>        
     
 </h2>
-<ul>
-<li>User sends <code>/hoje</code> → Bot responds with today’s lunch and dinner options.</li>
-<li>User sends <code>/semana</code> → Bot lists the menu for each weekday.</li>
-</ul>
+<p><strong>User:</strong> <code>/hoje</code><br>
+<strong>Bot:</strong></p>
+<pre tabindex="0"><code>
+🍛 Today’s Menu:
 
-<h2 class="relative group">Installation &amp; Run 
-    <div id="installation--run" class="anchor"></div>
+* Main dish: Chicken with rice
+* Vegetarian: Lentil stew
+* Side dishes: Salad, beans
+</code></pre><p><strong>User:</strong> <code>/semana</code><br>
+<strong>Bot:</strong> Lists the menu for each weekday with icons and formatting.</p>
+<hr>
+
+<h2 class="relative group">Installation &amp; Running 
+    <div id="installation--running" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installation--run" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installation--running" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>If you want to reproduce this project, you first need to create a Telegram bot. Acess this tutorial for more information: <a
+
+<h3 class="relative group">Prerequisites 
+    <div id="prerequisites" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#prerequisites" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>Node.js 18+ and npm installed.</li>
+<li>Telegram bot token (create one via <a
   href="https://core.telegram.org/bots/tutorial"
     target="_blank"
-  >https://core.telegram.org/bots/tutorial</a>.</p>
-<p>You also need to create a <code>.env</code> file at the root folder, it must contain the key <code>TELEGRAM_KEY</code> with yout bot key.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-.env" data-lang=".env"><span class="line"><span class="cl"><span class="nv">TELEGRAM_KEY</span><span class="o">=</span>&lt;your_key&gt;
-</span></span></code></pre></div><p>After this setup, you can install the dependencies and run the project.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install dependencies</span>
-</span></span><span class="line"><span class="cl">npm install
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Development mode</span>
-</span></span><span class="line"><span class="cl">npm run start:dev
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Production</span>
-</span></span><span class="line"><span class="cl">npm run start:prod
+  >Telegram Bot Tutorial</a>).</li>
+</ul>
+
+<h3 class="relative group">Setup 
+    <div id="setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#setup" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>Create a <code>.env</code> file in the project root:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-env" data-lang="env"><span class="line"><span class="cl"><span class="nv">TELEGRAM_KEY</span><span class="o">=</span>&lt;your_bot_token&gt;
+</span></span></code></pre></div><ol start="2">
+<li>Install dependencies:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install
+</span></span></code></pre></div><ol start="3">
+<li>Run in development mode:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm run start:dev
+</span></span></code></pre></div><ol start="4">
+<li>Run in production:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm run start:prod
 </span></span></code></pre></div>
+<h3 class="relative group">Testing 
+    <div id="testing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#testing" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm run <span class="nb">test</span>
+</span></span></code></pre></div><hr>
+
+<h2 class="relative group">Contributing 
+    <div id="contributing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#contributing" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Contributions, issues, and feature requests are welcome! Please fork the repository and submit a pull request.</p>
+<hr>
+
+<h2 class="relative group">License 
+    <div id="license" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#license" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>This project is licensed under the MIT License.</p>
+
           
           
           
