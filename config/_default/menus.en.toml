@@ -69,5 +69,5 @@
 #   weight = 20
 
 [[main]]
-namename = "Projects"
+name = "Projects"
 pageRef = "projects"
